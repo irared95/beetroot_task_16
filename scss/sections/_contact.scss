@@ -1,0 +1,120 @@
+.contact {
+    background-image: url(../image/nature.png);
+    padding: 100px 0;
+    &__top {
+        text-align: center;
+        &-title {
+            font-family: $raleway-bold, $ss;
+            font-size: 90px;
+            line-height: 92px;
+            color: $black;
+            margin-bottom: 45px;
+        }
+        &-text {
+            font-size: 17px;
+            font-family: $raleway-light, $ss;
+            color: $black;
+            line-height: 25px;
+            max-width: 346px;
+            display: inline-block;
+            margin-bottom: 48px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left,
+    &__right {
+        width: 42%;
+    }
+    &__left {
+        &-field {
+            margin-bottom: 15px;
+            &:last-child {
+                margin: 0;
+            }
+            textarea {
+                min-height: 250px;
+                padding-top: 18px;
+                padding: 18px 20px 18px;
+                line-height: 20px;
+            }
+        }
+        &-input {
+            min-height: 50px;
+            width: 100%;
+            background-color: rgba(0, 196, 196, 0.5);
+            padding: 18px 15px 18px;
+            font-size: 15px;
+            font-family: 'Raleway Bold', sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 17px;
+            border: 0;
+            transition: all 0.2s linear;
+            border-left: 5px solid transparent;
+            &:focus {
+                background-color: rgb(0, 196, 196);
+                border-left: 5px solid#355b82;
+            }
+            &::placeholder {
+                font-size: 15px;
+                font-family: 'Raleway Light', sans-serif;
+                color: rgb(255, 255, 255);
+                line-height: 17px;
+            }
+        }
+    }
+    &__item {
+        margin-bottom: 20px;
+        &-title {
+            font-family: 'Raleway Bold', sans-serif;
+            font-size: 17px;
+            line-height: 23px;
+            color: #262626;
+            text-transform: uppercase;
+        }
+        &-link,
+        &-address {
+            font-size: 20px;
+            line-height: 22px;
+            font-family: 'Raleway Light', sans-serif;
+            color: #262626;
+        }
+        &-address {
+            font-style: normal;
+        }
+        &-item {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 60px 0;
+        background-size: cover;
+        &__top {
+            &-title {
+                font-size: 60px;
+                margin-bottom: 25px;
+            }
+        }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__left,
+        &__right {
+            width: 100%;
+        }
+        &__left {
+            margin-bottom: 30px;
+        }
+        &__right {
+            text-align: center;
+        }
+    }
+}

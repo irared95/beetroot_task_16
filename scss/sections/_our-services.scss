@@ -1,0 +1,116 @@
+.our-services {
+    background-color: $second-blue;
+    &__wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    &__left,
+    &__right {
+        width: 50%;
+    }
+    &__left {
+        padding: 160px 0;
+    }
+    &__right {
+        background-image: url(../image/our-services-tomato.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 400px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+        background-color: $white;
+        margin-bottom: 20px;
+        min-height: 100px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-family: $raleway-bold, $ss;
+        color: $black;
+        line-height: 22px;
+        width: calc(100% - 100px);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-right: 2px solid $grey;
+    }
+    &__title {
+        font-size: 90px;
+        font-family: $raleway-bold, $ss;
+        color: $white;
+        line-height: 92px;
+        text-align: center;
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .our-services {
+        &__title {
+            font-size: 60px;
+            line-height: 64px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-services {
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 60px;
+        background-image: url(../image/our-services-tomato.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &__left {
+            order: 2;
+            width: 100%;
+            padding: 120px 0;
+            display: flex;
+            justify-content: center;
+        }
+        &__right {
+            width: 100%;
+            order: 1;
+            background-image: none;
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__title {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

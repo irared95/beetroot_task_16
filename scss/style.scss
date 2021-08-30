@@ -1,0 +1,64 @@
+@import "./utils/fonts";
+@import "./utils/variable";
+@import "./utils/mixins";
+* {
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    outline: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    @include reset-list;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import "./components/header";
+@import "./components/mouse";
+@import "./components/btns";
+@import "./components/footer";
+@import "./sections/about-us";
+@import "./sections/fresh-life";
+@import "./sections/our-services";
+@import "./sections/gallery";
+@import "./sections/subscribe";
+@import "./sections/blog";
+@import "./sections/contact";

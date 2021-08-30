@@ -1,0 +1,120 @@
+.blog {
+    background-color: $violet;
+    padding: 100px 0;
+    &__top {
+        text-align: center;
+        &-title {
+            font-family: $raleway-bold, $ss;
+            font-size: 90px;
+            line-height: 92px;
+            color: $white;
+            margin-bottom: 30px;
+        }
+        &-text {
+            font-family: $raleway-light, $ss;
+            font-size: 17px;
+            line-height: 24px;
+            color: $white;
+            max-width: 570px;
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        &-title {
+            font-family: $raleway-bold, $ss;
+            font-size: 20px;
+            color: $white;
+            line-height: 25px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        &-text {
+            font-family: $raleway-light, $ss;
+            font-size: 13px;
+            line-height: 16px;
+            color: $white;
+            display: inline-block;
+            cursor: pointer;
+        }
+        &-item {
+            width: 31.5%;
+            padding: 30px 20px 24px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            &:hover {
+                .blog__bottom-title {
+                    text-decoration: underline;
+                }
+                .blog__time {
+                    background-color: $black;
+                }
+            }
+            &--image-drink {
+                background-image: url(../image/smoothies.jpg);
+            }
+            &--image-soup {
+                background-image: url(../image/soup.jpg);
+            }
+            &--image-berry {
+                background-image: url(../image/berries.jpg);
+            }
+        }
+    }
+    &__time {
+        display: inline-block;
+        margin: 0 0 130px 0;
+        padding: 3px 0;
+        max-width: 60px;
+        min-height: 60px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: $opacity-black;
+        transition: all .2s linear;
+        cursor: pointer;
+        &-day {
+            font-family: $raleway-bold, $ss;
+            font-size: 32px;
+            line-height: 28px;
+            color: $white;
+        }
+        &-month {
+            font-family: $raleway-heavy, $ss;
+            font-size: 21px;
+            line-height: 21px;
+            color: $white;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        padding: 60px 0;
+        &__top {
+            &-title {
+                font-size: 60px;
+                margin-bottom: 25px;
+            }
+        }
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &-item {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
